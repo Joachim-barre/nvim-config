@@ -18,7 +18,7 @@ function M.setup()
     local coq = require "coq"
 
     config_def = {
-        pyright = true,
+        pylyzer = true,
         clangd = true,
         csharp = true,
         rust = true,
@@ -26,8 +26,8 @@ function M.setup()
     }
     for k,v in pairs(config) do config_def[k] = v end
     config = config_def
-    if config.pyright then
-        require'lspconfig'.pyright.setup{coq.lsp_ensure_capabilities()}
+    if config.pylyzer then
+        require'lspconfig'.pylyzer.setup{coq.lsp_ensure_capabilities()}
     end
     if config.clangd then 
         require("lspconfig").clangd.setup(
