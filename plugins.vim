@@ -39,4 +39,6 @@ Plug 'theHamsta/nvim_rocks', {'do': 'pip3 install --user --break-system-packages
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'QuickGD/quickgd.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 call plug#end()

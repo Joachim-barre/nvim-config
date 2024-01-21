@@ -18,7 +18,9 @@ modules = {
     'nvim-treesitter.configs',
     "dap-config",
     "dapui",
-    "quickgd"
+    "quickgd",
+    "mason",
+    "mason-lspconfig"
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
