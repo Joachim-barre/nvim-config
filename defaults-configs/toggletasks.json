@@ -1,0 +1,55 @@
+{
+    "tasks": [
+        {
+            "name": "Echo example",
+            "cmd": "echo 'Current working dir = ${global_cwd}'"
+        },
+        {
+            "name": "System logs",
+            "cmd": "journalctl -b --follow",
+            "tags": ["dev"]
+        },
+        {
+            "name": "Makefile build",
+            "cmd": "make -j",
+            "cwd": "${global_cwd}",
+            "tags": ["build", "make"]
+        },
+        {
+            "name": "CMake config",
+            "cmd": "mkdir -p build && cd build && cmake ..",
+            "cwd": "${global_cwd}",
+            "tags": ["cmake"]
+        },
+        {
+            "name": "CMake build",
+            "cmd": "cmake --build build -j",
+            "cwd": "${global_cwd}",
+            "tags": ["build", "cmake"]
+        },
+        {
+            "name": "CMake build & run",
+            "cmd": "cmake --build build -j && build/Main",
+            "cwd": "${global_cwd}",
+            "tags": ["build", "cmake"]
+        },
+        {
+            "name": "Scons build four threads",
+            "cmd": "scons -j4",
+            "cwd": "${global_cwd}",
+            "tags": ["build", "scons"]
+        },
+        {
+            "name": "Scons build eight threads",
+            "cmd": "scons -j8",
+            "cwd": "${global_cwd}",
+            "tags": ["build", "scons"]
+        },
+        {
+            "name": "Gdb debug session",
+            "cmd": "gdb",
+            "cwd": "${global_cwd}",
+            "tags": ["debug", "gdb"]
+        }
+    ]
+}
