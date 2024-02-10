@@ -1,5 +1,5 @@
 return {
-    "name" = {
+    name = {
         "venv",
         ".venv"
     }
