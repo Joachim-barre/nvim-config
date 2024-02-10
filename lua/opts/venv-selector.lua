@@ -1,0 +1,6 @@
+return {
+    "name" = {
+        "venv",
+        ".venv"
+    }
+}
