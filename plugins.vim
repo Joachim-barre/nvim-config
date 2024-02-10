@@ -41,4 +41,5 @@ Plug 'rcarriga/nvim-dap-ui'
 Plug 'QuickGD/quickgd.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'echasnovski/mini.clue'
 call plug#end()

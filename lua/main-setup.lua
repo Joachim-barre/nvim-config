@@ -20,7 +20,8 @@ modules = {
     "dapui",
     "quickgd",
     "mason",
-    "mason-lspconfig"
+    "mason-lspconfig",
+    'mini.clue'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
