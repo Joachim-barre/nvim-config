@@ -21,7 +21,8 @@ modules = {
     "quickgd",
     "mason",
     "mason-lspconfig",
-    'mini.clue'
+    'mini.clue',
+    'venv-selector'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
