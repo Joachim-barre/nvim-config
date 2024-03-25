@@ -44,4 +44,5 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'echasnovski/mini.clue',
 Plug 'ellisonleao/glow.nvim'
 Plug 'linux-cultist/venv-selector.nvim'
+Plug 'lukas-reineke/headlines.nvim'
 call plug#end()

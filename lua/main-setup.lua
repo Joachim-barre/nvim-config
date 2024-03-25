@@ -23,7 +23,8 @@ modules = {
     "mason-lspconfig",
     'mini.clue',
     'venv-selector',
-    'glow'
+    'glow',
+    'headlines'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
