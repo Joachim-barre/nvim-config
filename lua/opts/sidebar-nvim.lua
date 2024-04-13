@@ -156,7 +156,7 @@ local section = {
     },
 }
 local opts = {
-    open = true,
+    open = false,
     datetime = {
         icon = "󰥔",
         format = "%a %b %d, %H:%M",
@@ -165,6 +165,6 @@ local opts = {
         }
     },
     sections = {"datetime", section, "files", "git" ,"diagnostics"} ,
-}
+}vim.g.sidebar = false;
 
 return opts
