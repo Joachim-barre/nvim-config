@@ -34,8 +34,6 @@ set nofoldenable                     " Disable folding at startup.
 " autocmd TabNew * NvimTreeOpen
 " autocmd TabNew * lua require("sidebar-nvim").open()
 
-autocmd BufWinEnter,WinEnter term://* startinsert
-autocmd BufLeave term://* stopinsert
 autocmd TermOpen * tnoremap <C-w> <c-\><c-n><C-w>
 autocmd TermOpen * tnoremap <C-n> <c-\><c-n>
 
