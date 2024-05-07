@@ -13,7 +13,10 @@ function M.setup()
         if vim.bo.filetype ~= 'git'
           and not vim.bo.filetype ~= 'gitcommit'
           and not vim.bo.filetype ~= 'gitrebase'
-          then require('session_manager').autosave_session() end
+          then 
+              vim.g.sidebar=require("sidebar-nvim.lib").is_open()
+              require('session_manager').autosave_session()
+          end
       end
     })
     vim.api.nvim_create_autocmd({ 'User' }, {
