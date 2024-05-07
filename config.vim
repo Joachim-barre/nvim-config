@@ -36,7 +36,8 @@ set nofoldenable                     " Disable folding at startup.
 
 autocmd BufWinEnter,WinEnter term://* startinsert
 autocmd BufLeave term://* stopinsert
-autocmd TermOpen * tnoremap <Esc> <c-\><c-n>
+autocmd TermOpen * tnoremap <C-w> <c-\><c-n><C-w>
+autocmd TermOpen * tnoremap <C-n> <c-\><c-n>
 
 noremap a @
 nnoremap <silent> <Tab> :bn<cr>
