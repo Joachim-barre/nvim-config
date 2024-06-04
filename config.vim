@@ -26,7 +26,7 @@ let mapleader = ','
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable                     " Disable folding at startup.
-
+colorscheme vim
 
 
 " autocmd VimEnter * NvimTreeOpen 
