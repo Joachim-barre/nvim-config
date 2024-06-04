@@ -43,6 +43,7 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'echasnovski/mini.clue',
 Plug 'ellisonleao/glow.nvim'
-Plug 'linux-cultist/venv-selector.nvim'
+Plug 'linux-cultist/venv-selector.nvim', {'branch': 'regexp' }
 Plug 'lukas-reineke/headlines.nvim'
+Plug 'nvim-neotest/nvim-nio'
 call plug#end()
