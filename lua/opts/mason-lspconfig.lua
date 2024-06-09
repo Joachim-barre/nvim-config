@@ -1,3 +1,3 @@
 return {
-    ensure_installed = { "clangd", "rust_analyzer", "csharp_ls", "pyright" },
+    ensure_installed = { "clangd", "rust_analyzer", "omnisharp", "pyright" },
 }

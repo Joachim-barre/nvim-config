@@ -38,7 +38,7 @@ function M.setup()
         }))
     end
     if config.csharp then
-        require('lspconfig').csharp_ls.setup{
+        require('lspconfig').omnisharp.setup{
             
         }
     end
