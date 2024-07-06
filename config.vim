@@ -38,5 +38,5 @@ autocmd TermOpen * tnoremap <C-w> <c-\><c-n><C-w>
 autocmd TermOpen * tnoremap <C-n> <c-\><c-n>
 
 noremap a @
-nnoremap <silent> <Tab> :bn<cr>
-nnoremap <silent> <S-Tab> :bp<cr>                                                                                                                                 nnoremap f :NERDTreeToggle<CR>    
+nnoremap <silent> <Tab> :BufferLineCycleNext<cr>
+nnoremap <silent> <S-Tab> :BufferLineCyclePrev<cr>  
