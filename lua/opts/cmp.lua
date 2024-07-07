@@ -34,6 +34,10 @@ return {
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = {
-        { name = 'buffer' }
+        { name = 'buffer' },
+        {
+            name='dictionary',
+            keyword_length = 2,
+        }
     }
 }
