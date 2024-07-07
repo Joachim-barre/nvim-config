@@ -15,7 +15,7 @@ function M.setup()
     augroup end
     ]])
     local protocol = require('vim.lsp.protocol')
-    local capabilities = require('cmp_nvim_lsp').default_capabilities
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     config_def = {
         pyright = true,
