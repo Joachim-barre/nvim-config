@@ -50,7 +50,7 @@ Plug 'echasnovski/mini.clue',
 Plug 'echasnovski/mini-git'
 Plug 'ellisonleao/glow.nvim'
 Plug 'linux-cultist/venv-selector.nvim', {'branch': 'regexp' }
-Plug 'lukas-reineke/headlines.nvim'
+Plug 'MeanderingProgrammer/markdown.nvim'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'lewis6991/gitsigns.nvim'
 call plug#end()

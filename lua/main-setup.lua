@@ -24,10 +24,10 @@ modules = {
     'mini.clue',
     'venv-selector',
     'glow',
-    'headlines',
     'cmp',
     'gitsigns',
-    'mini.git'
+    'mini.git',
+    'render-markdown'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
