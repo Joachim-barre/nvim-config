@@ -6,7 +6,8 @@ mapping = cmp.mapping.preset.cmdline({
     ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
 }),
 sources = {
-    { name = 'buffer' }
+    { name = 'buffer' },
+    { name = 'nvim_lsp_document_symbol' },
 }})
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
@@ -36,7 +37,6 @@ return {
     sources = {
         { name = 'buffer' },
         { name = 'calc' },
-        { name = 'nvim_lsp_document_symbol' },
         { name = 'nvim_lsp' },
     }
 }
