@@ -5,11 +5,20 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-" 9000+ Snippets
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-" lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
-Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-calc'
+Plug 'Saecki/crates.nvim'
+Plug 'dmitmel/cmp-cmdline-history'
+Plug 'amarakon/nvim-cmp-buffer-lines'
+Plug 'uga-rosa/cmp-dictionary'
+Plug 'dmitmel/cmp-digraphs'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'emilienlemaire/clang-tidy.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'

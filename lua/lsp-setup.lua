@@ -15,7 +15,7 @@ function M.setup()
     augroup end
     ]])
     local protocol = require('vim.lsp.protocol')
-    local coq = require "coq"
+    local capabilities = require('cmp_nvim_lsp').default_capabilities
 
     config_def = {
         pyright = true,
@@ -27,15 +27,12 @@ function M.setup()
     for k,v in pairs(config) do config_def[k] = v end
     config = config_def
     if config.pyright then
-        require'lspconfig'.pyright.setup{coq.lsp_ensure_capabilities()}
+        require'lspconfig'.pyright.setup{capabilities}
     end
     if config.clangd then 
-        require("lspconfig").clangd.setup(
-            coq.lsp_ensure_capabilities({
-                on_attach = function()
-                -- do stuff here....
-        end
-        }))
+        require("lspconfig").clangd.setup{
+            capabilities=capabilities
+        }
     end
     if config.csharp then
             require("lspconfig").omnisharp.setup {
@@ -51,15 +48,11 @@ function M.setup()
     end
     if config.rust then
         require('lspconfig').rust_analyzer.setup{
-
+            capabilities=capabilities
         }
     end
     if config.cmp then
         vim.cmd([[
-        augroup COQ 
-        autocmd!
-        autocmd VimEnter * COQnow -s
-        augroup END
         highlight Pmenu ctermbg=gray guibg=gray
         ]])
     end
