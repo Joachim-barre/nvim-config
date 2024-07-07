@@ -35,6 +35,9 @@ return {
     }),
     sources = {
         { name = 'buffer' },
-        { name = 'buffer-lines' }
+        { name = 'buffer-lines' },
+        { name = 'calc' },
+        { name = 'nvim_lsp_document_symbol' },
+        { name = 'nvim_lsp' }
     }
 }
