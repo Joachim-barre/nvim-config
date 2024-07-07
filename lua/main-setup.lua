@@ -24,7 +24,8 @@ modules = {
     'mini.clue',
     'venv-selector',
     'glow',
-    'headlines'
+    'headlines',
+    'cmp'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
