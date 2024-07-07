@@ -47,6 +47,7 @@ Plug 'QuickGD/quickgd.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'echasnovski/mini.clue',
+Plug 'echasnovski/mini-git'
 Plug 'ellisonleao/glow.nvim'
 Plug 'linux-cultist/venv-selector.nvim', {'branch': 'regexp' }
 Plug 'lukas-reineke/headlines.nvim'

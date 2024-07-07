@@ -26,7 +26,8 @@ modules = {
     'glow',
     'headlines',
     'cmp',
-    'gitsigns'
+    'gitsigns',
+    'mini.git'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
