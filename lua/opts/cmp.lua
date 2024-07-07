@@ -23,7 +23,7 @@ sources = {
 matching = { disallow_symbol_nonprefix_matching = false }
 })
 
-vim.opt.completeopt = "menu,menuone"
+vim.opt.completeopt = "menu,menuone,noselect"
 
 return {
     mapping = cmp.mapping.preset.insert({
