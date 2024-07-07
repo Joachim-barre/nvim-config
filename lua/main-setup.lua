@@ -25,8 +25,7 @@ modules = {
     'venv-selector',
     'glow',
     'headlines',
-    'cmp',
-    'cmp_dictionary'
+    'cmp'
 }
 for i, module in ipairs(modules) do
     safe_setup(module)
