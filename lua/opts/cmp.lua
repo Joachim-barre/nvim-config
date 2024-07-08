@@ -24,14 +24,14 @@ matching = { disallow_symbol_nonprefix_matching = false }
 })
 
 vim.opt.completeopt = "menu,menuone,noselect"
-
+ 
 return {
     mapping = cmp.mapping.preset.insert({
       ['<S-Down>'] = cmp.mapping.scroll_docs(-4),
       ['<S-Up>'] = cmp.mapping.scroll_docs(4),
       ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }) },
       ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
-      ['<Esc>'] = cmp.mapping.abort(),
+      ['<S-Esc>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = {
