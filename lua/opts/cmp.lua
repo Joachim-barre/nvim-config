@@ -23,8 +23,8 @@ sources = {
 matching = { disallow_symbol_nonprefix_matching = false }
 })
 
-vim.opt.completeopt = "menu,menuone,noselect"
- 
+vim.opt.completeopt = "menu,menuone"
+
 return {
     mapping = cmp.mapping.preset.insert({
       ['<S-Down>'] = cmp.mapping.scroll_docs(-4),
@@ -32,7 +32,7 @@ return {
       ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }) },
       ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
       ['<S-Esc>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = {
         { name = 'buffer' },
