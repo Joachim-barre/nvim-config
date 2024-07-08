@@ -1,5 +1,5 @@
 opts = {
-    mode="tab",
+    mode="toggleterm",
     float = {
         border = "rounded",
     }
