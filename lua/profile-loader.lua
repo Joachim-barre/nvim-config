@@ -55,6 +55,10 @@ end
 
 function M.load_default()
     vim.g.profile = require("code_runner.load_json")(vim.fn.stdpath("config") .. "/defaults-configs/profile.json")
+    if vim.g.profile == nil then
+        vim.notify("cloud not parse default profile")
+        return nil
+    end
     apply_profile()
     return vim.g.profile
 end
