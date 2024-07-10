@@ -23,14 +23,14 @@ function M.setup()
       pattern = "SessionSavePost",
       group = config_group,
       callback = function()
-          if vim.g.sidebar then require('sidebar-nvim').open() end
+          if vim.g.sidebar or vim.g.profile.sidebar.enabled then require('sidebar-nvim').open() end
       end,
     })
     vim.api.nvim_create_autocmd({ 'User' }, {
       pattern = "SessionLoadPost",
       group = config_group,
       callback = function()
-        if vim.g.sidebar then require('sidebar-nvim').open() end
+        if vim.g.sidebar or vim.g.profile.sidebar.enabled then require('sidebar-nvim').open() end
       end,
     })
 end
