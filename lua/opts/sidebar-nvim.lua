@@ -163,7 +163,7 @@ for i = 1,#profile.sidebar.sections do
 end
 
 local opts = {
-    open = false,
+    open = not (profile.sidebar.enabled == 0),
     datetime = {
         icon = "󰥔",
         format = "%a %b %d, %H:%M",
