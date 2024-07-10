@@ -155,6 +155,13 @@ local section = {
         ["<CR>"] = on_clicked;
     },
 }
+local profile = vim.g.profile
+for i = 1,#profile.sidebar.sections do
+    if profile.sidebar.sections[i] == "actions" then
+        profile.sidebar.sections[i] = section
+    end
+end
+
 local opts = {
     open = false,
     datetime = {
@@ -164,7 +171,7 @@ local opts = {
             { name = "local" }
         }
     },
-    sections = {"datetime", section, "files", "git" ,"diagnostics"} ,
+    sections = profile.sidebar.sections,
 }vim.g.sidebar = false;
 
 return opts
