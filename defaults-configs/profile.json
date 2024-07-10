@@ -1,0 +1,10 @@
+{
+    "disabled_modules" : [],
+    "sidebar" : {
+        "enabled" : 0,
+        "sections" : [
+            "datetime", "actions", "files", "git" ,"diagnostics"
+        ]
+    },
+    "local-scripts" : []
+}
