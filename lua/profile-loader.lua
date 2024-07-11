@@ -11,7 +11,7 @@ M.modules = {
     "telescope",
     "symbols-outline",
     "code_runner",
-    "session-setup",
+    "possession",
     "welcome-setup",
     "statusline-setup",
     "lsp-setup",
