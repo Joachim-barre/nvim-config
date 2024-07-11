@@ -11,6 +11,16 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
   end
 })
 
+function on_save(name)
+    local userdata = {}
+
+    return userdata
+end
+
+function on_load(name, userdata)
+
+end
+
 require('telescope').load_extension('possession')
 
 return {
@@ -23,6 +33,10 @@ return {
         tmp_name = 'tmp', -- or fun(): string
         on_load = false,
         on_quit = false,
+    },
+    hooks = {
+        before_save = on_save,
+        after_load = on_load
     },
     prompt_no_cr = true,
     plugins = {
