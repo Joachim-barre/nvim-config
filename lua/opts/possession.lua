@@ -13,11 +13,17 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
 
 function on_save(name)
     local userdata = {}
-
+    require("sidebar-nvim").close()
     return userdata
 end
 
 function on_load(name, userdata)
+    if vim.g.profile.sidebar.enabled ~= 0 then
+        require("sidebar-nvim").open()
+    end
+end
+
+function after_save(name, userdata, aborted)
     if vim.g.profile.sidebar.enabled ~= 0 then
         require("sidebar-nvim").open()
     end
@@ -38,6 +44,7 @@ return {
     },
     hooks = {
         before_save = on_save,
+        after_save = after_save,
         after_load = on_load
     },
     prompt_no_cr = true,
