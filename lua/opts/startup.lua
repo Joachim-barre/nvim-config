@@ -18,8 +18,8 @@ opts.body.content = {
     { " Find File", "Telescope find_files", "<leader>ff" },
     { " Find Word", "Telescope live_grep", "<leader>lg" },
     { " Recent Files", "Telescope oldfiles", "<leader>of" },
-    { "󰺏 Resume session", "SessionManager load_last_session", "<leader>rs"},
-    { "󱛡 Load old session", "SessionManager load_session", "<leader>ls"},
+    { "󰺏 Resume session", "PossessionLoad", "<leader>rs"},
+    { "󱛡 Load old session", "Telescope possession list", "<leader>ls"},
     { " File Browser", "NvimTreeToggle", "<leader>fb" },
     { " Colorschemes", "Telescope colorscheme", "<leader>cs" },
     { " New File", "lua require'startup'.new_file()", "<leader>nf"}
