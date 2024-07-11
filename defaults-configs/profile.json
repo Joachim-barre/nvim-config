@@ -6,5 +6,27 @@
             "datetime", "actions", "files", "git" ,"diagnostics"
         ]
     },
-    "local-scripts" : []
+    "local-scripts" : [],
+    "run" : {
+        "java" : [
+            "cd $dir &&",
+            "javac $fileName &&",
+            "java $fileNameWithoutExt"
+        ],
+        "python" : "python3 $file $end",
+        "sh" : "zsh",
+        "c" : [
+            "cd $dir &&",
+            "clang $fileName",
+            "-o $fileNameWithoutExt &&",
+            "$dir/$fileNameWithoutExt"
+        ],
+        "c++" : [
+            "cd $dir &&",
+            "clang $fileName",
+            "-o $fileNameWithoutExt &&",
+            "$dir/$fileNameWithoutExt"
+        ],
+        "rust" : "cargo test && cargo run $end"
+    }
 }
