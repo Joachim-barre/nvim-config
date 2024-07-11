@@ -18,7 +18,9 @@ function on_save(name)
 end
 
 function on_load(name, userdata)
-
+    if vim.g.profile.sidebar.enabled ~= 0 then
+        require("sidebar-nvim").open()
+    end
 end
 
 require('telescope').load_extension('possession')
