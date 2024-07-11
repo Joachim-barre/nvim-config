@@ -64,7 +64,21 @@ function M.load_default()
 end
 
 function M.load()
-    return M.load_default()
+    vim.g.profile = require("code_runner.load_json")(vim.fn.stdpath("config") .. "/defaults-configs/profile.json")
+    if vim.g.profile == nil then
+        vim.notify("cloud not parse default profile")
+        return nil
+    end
+    if vim.fn.filereadable("./.nvim/profile.json") ~= 0 then
+        local profile = require("code_runner.load_json")(vim.fn.expand("./.nvim/profile.json")) 
+        if profile == nil then
+            vim.notify("failed to parse local profile")
+            profile = {}  
+        end
+        vim.g.profile = vim.tbl_deep_extend("force", vim.g.profile, profile)
+    end
+    apply_profile(vim.g.profile)
+    return vim.g.profile
 end
 
 return M
