@@ -14,6 +14,8 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
 require('telescope').load_extension('possession')
 
 return {
+    silent = true,
+    debug = false,
     autosave = {
         current = true,  -- or fun(name): boolean
         cwd = true, -- or fun(): boolean
@@ -22,6 +24,7 @@ return {
         on_load = false,
         on_quit = false,
     },
+    prompt_no_cr = true,
     plugins = {
         close_windows = false,
         delete_hidden_buffers = false
