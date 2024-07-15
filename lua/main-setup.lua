@@ -10,7 +10,10 @@ end
 
 if profile["local-scripts"] ~= nil then
     for i, script in ipairs(profile["local-scripts"]) do
-        safe_require(script)
+        local status = pcall(vim.cmd, "source .nvim/" .. script)
+        if not status then
+            vim.notify("failed to load local module at .nvim/" .. script)
+        end
     end
 end
 
