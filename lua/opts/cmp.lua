@@ -25,6 +25,7 @@ matching = { disallow_symbol_nonprefix_matching = false }
 
 vim.opt.completeopt = "menu,menuone"
 
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#131313" })
 -- gray
 vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg='NONE', strikethrough=true, fg='#808080' })
 -- blue
@@ -58,6 +59,12 @@ return {
                 return vim_item
             end
         })
+    },
+    window = {
+        completion = {
+            border = "rounded",
+            winhighlight = "Normal:CmpNormal",
+        }
     },
     mapping = cmp.mapping.preset.insert({
       ['<S-Down>'] = cmp.mapping.scroll_docs(-4),
