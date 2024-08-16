@@ -18,7 +18,12 @@ mapping = cmp.mapping.preset.cmdline({
 }),
 sources = {
     { name = 'path' },
-    { name = 'cmdline' }
+    { 
+        name = 'cmdline',
+        option = {
+            ignore_cmds = {  }
+        }
+    }
 },
 matching = { disallow_symbol_nonprefix_matching = false }
 })
