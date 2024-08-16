@@ -53,4 +53,5 @@ Plug 'linux-cultist/venv-selector.nvim', {'branch': 'regexp' }
 Plug 'MeanderingProgrammer/markdown.nvim'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'https://github.com/onsails/lspkind.nvim'
 call plug#end()
