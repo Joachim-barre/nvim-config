@@ -8,6 +8,15 @@ if not status then
     local profile = require("profile-loader").load_default()
 end
 
+if profile["global-scripts"] ~= nil then
+    for i, script in ipairs(profile["global-scripts"]) do
+        local status = pcall(vim.cmd, "source " .. vim.fn.stdpath("config") .. "/global-configs/" .. script)
+        if not status then
+            vim.notify("failed to load global script at global-configs/" .. script)
+        end
+    end
+end
+
 if profile["local-scripts"] ~= nil then
     for i, script in ipairs(profile["local-scripts"]) do
         local status = pcall(vim.cmd, "source .nvim/" .. script)

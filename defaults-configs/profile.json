@@ -7,6 +7,7 @@
         ]
     },
     "local-scripts" : [],
+    "global-scripts" : [],
     "run" : {
         "java" : [
             "cd $dir &&",
