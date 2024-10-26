@@ -54,4 +54,7 @@ Plug 'MeanderingProgrammer/markdown.nvim'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'https://github.com/onsails/lspkind.nvim'
+Plug 'NvChad/volt'
+Plug 'NvChad/minty'
+Plug 'NvChad/menu'
 call plug#end()

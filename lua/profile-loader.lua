@@ -27,7 +27,8 @@ M.modules = {
     'cmp',
     'gitsigns',
     'mini.git',
-    'render-markdown'
+    'render-markdown',
+    'menu-setup'
 }
 
 function build_modulelist()
