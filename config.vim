@@ -12,6 +12,9 @@ set shiftwidth=6
 set expandtab
 set modeline
 set background=dark
+set termguicolors
+set signcolumn=yes
+autocmd VimEnter * highlight SignColumn guibg=dark
 
 set clipboard+=unnamedplus
 set encoding=UTF-8
