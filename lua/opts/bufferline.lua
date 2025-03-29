@@ -4,6 +4,8 @@ augroup BufferLineColor
 
 autocmd!
 
+autocmd VimEnter * highlight TabLineFill gui=None
+
 autocmd VimEnter * highlight BufferLineFill guibg=#191724
 
 autocmd VimEnter * highlight BufferLineSeparator guifg=#191724
