@@ -56,5 +56,29 @@ function M.setup()
         highlight Pmenu ctermbg=gray guibg=gray
         ]])
     end
+
+    vim.diagnostic.config({ 
+        virtual_text = true,
+        severity_sort = true
+    })
+
+    vim.o.updatetime = 250
+
+    vim.api.nvim_create_autocmd("CursorHold", {
+        callback = function()
+            vim.diagnostic.open_float(nil, {
+            focusable = false,
+            close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+            border = 'rounded',
+            source = 'always',
+            prefix = '',
+            scope = 'cursor',
+        })
+    end
+    })
+
+    vim.cmd("autocmd VimEnter * hi NormalFloat guibg=dark")
+
 end
+
 return M
