@@ -1,4 +1,5 @@
 cmp = require("cmp")
+lspkind = require("lspkind")
 
 cmp.setup.cmdline({ '/', '?' }, {
 mapping = cmp.mapping.preset.cmdline({
@@ -42,10 +43,10 @@ vim.api.nvim_set_hl(0, "CmpItemKindProperty", { fg = "#FFFFFF", bg = "#B5585F" }
 vim.api.nvim_set_hl(0, "CmpItemKindEvent", { fg = "#FFFFFF", bg = "#B5585F" })
 
 vim.api.nvim_set_hl(0, "CmpItemKindText", { fg = "#FFFFFF", bg = "#6d8b41" })
-vim.api.nvim_set_hl(0, "CmpItemKindEnum", { fg = "#FFFFFF", bg = "#6d8b41" })
 vim.api.nvim_set_hl(0, "CmpItemKindKeyword", { fg = "#FFFFFF", bg = "#6d8b41" })
 
 vim.api.nvim_set_hl(0, "CmpItemKindConstant", { fg = "#FFFFFF", bg = "#cccc00" })
+vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { fg = "#FFFFFF", bg = "#cccc00" })
 vim.api.nvim_set_hl(0, "CmpItemKindConstructor", { fg = "#FFFFFF", bg = "#cccc00" })
 vim.api.nvim_set_hl(0, "CmpItemKindReference", { fg = "#FFFFFF", bg = "#cccc00" })
 
@@ -67,18 +68,26 @@ vim.api.nvim_set_hl(0, "CmpItemKindValue", { fg = "#FFFFFF", bg = "#6C8ED4" })
 vim.api.nvim_set_hl(0, "CmpItemKindEnumMember", { fg = "#FFFFFF", bg = "#6C8ED4" })
 
 vim.api.nvim_set_hl(0, "CmpItemKindInterface", { fg = "#FFFFFF", bg = "#58B5A8" })
+vim.api.nvim_set_hl(0, "CmpItemKindEnum", { fg = "#FFFFFF", bg = "#58B5A8" })
 vim.api.nvim_set_hl(0, "CmpItemKindColor", { fg = "#FFFFFF", bg = "#58B5A8" })
-vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { fg = "#FFFFFF", bg = "#58B5A8" })
 
+local overiden_icons = {
+    Text = lspkind.presets["codicons"].Text,
+    Module = lspkind.presets["codicons"].Module,
+    Enum = lspkind.presets["codicons"].Enum,
+    Reference = "&",
+    EnumMember = lspkind.presets["codicons"].EnumMember,
+    TypeParameter = lspkind.presets["codicons"].TypeParameter
+}
 
 return {
     formatting = {
         fields = { "kind", "abbr", "menu" },
         format = function(entry, vim_item)
-            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+            local kind = lspkind.cmp_format({ mode = "symbol_text", maxwidth = 50, symbol_map = overiden_icons })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = " " .. (strings[1] or "") .. " "
-            kind.menu = "    (" .. (strings[2] or "") .. ")"
+            kind.menu = "   [" .. entry.source.name .. "] ("  .. (strings[2] or "") .. ")"
 
             return kind
         end,
@@ -99,10 +108,10 @@ return {
       ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = {
-        { name = 'buffer' },
         { name = 'calc' },
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
-        { name = 'nvim_lua' } 
+        { name = 'nvim_lua' }, 
+        { name = 'buffer' }
     }
 }
