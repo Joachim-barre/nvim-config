@@ -46,7 +46,7 @@ function M.setup()
             return vim.loop.cwd() -- current working directory
         end,
     })
-    vim.lsp.config("rust-analyser", {
+    vim.lsp.config("rust_analyzer", {
         capabilities=capabilities
     })
     if config.cmp then
