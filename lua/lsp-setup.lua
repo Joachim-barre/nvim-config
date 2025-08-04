@@ -19,14 +19,12 @@ function M.setup()
             return vim.loop.cwd() -- current working directory
         end,
     })
-    if config.cmp then
-        vim.cmd([[
-        highlight Pmenu ctermbg=gray guibg=gray
-        ]])
-    end
+    vim.cmd([[
+    highlight Pmenu ctermbg=gray guibg=gray
+    ]])
 
     for name, v in pairs(config) do
-        if (not (name == "cmp")) and v.enabled then
+        if v.enabled then
             vim.lsp.config(name, {
                 capabilities= capabilities
             })

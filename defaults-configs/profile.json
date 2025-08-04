@@ -31,7 +31,6 @@
         "rust" : "cargo test && cargo run $end"
     },
     "lspconfig" : {
-        "cmp": true,
         "rust_analyzer": {
             "enabled": true,
             "config": {}
