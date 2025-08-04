@@ -32,7 +32,7 @@
     },
     "lspconfig" : {
         "cmp": true,
-        "rust": {
+        "rust_analyzer": {
             "enabled": true,
             "config": {}
         },
@@ -44,7 +44,7 @@
             "enabled": true,
             "config": {}
         },
-        "csharp": {
+        "omnisharp": {
             "enabled": true,
             "config": {
                 "settings": {

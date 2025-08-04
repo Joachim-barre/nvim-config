@@ -1,14 +1,5 @@
 local M = {}
 
-M.configname_to_lspname = {
-    ["pyright"] = "pyright",
-    ["clangd"] = "clangd",
-    ["csharp"] = "omnisharp",
-    ["cmp"] = "",
-    ["rust"] = "rust_analyzer",
-    ["asm"] = "asm-lsp",
-}
-
 function M.setup()
     local config = vim.g.profile["lspconfig"] or {}
     vim.cmd([[
@@ -34,9 +25,8 @@ function M.setup()
         ]])
     end
 
-    for k, v in pairs(config) do
-        local name = M.configname_to_lspname[k]
-        if (not (name == "")) and v.enabled then
+    for name, v in pairs(config) do
+        if (not (name == "cmp")) and v.enabled then
             vim.lsp.config(name, {
                 capabilities= capabilities
             })
