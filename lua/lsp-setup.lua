@@ -57,7 +57,7 @@ function M.setup()
 
     for k, v in pairs(config) do
         if v then
-            vim.lsp.enable("k")
+            vim.lsp.enable(k)
         end
     end
 
