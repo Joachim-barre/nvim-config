@@ -19,9 +19,6 @@ function M.setup()
             return vim.loop.cwd() -- current working directory
         end,
     })
-    vim.cmd([[
-    highlight Pmenu ctermbg=gray guibg=gray
-    ]])
 
     for name, v in pairs(config) do
         if v.enabled then

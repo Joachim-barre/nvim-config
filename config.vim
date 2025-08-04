@@ -46,3 +46,5 @@ nnoremap <silent> <S-Tab> :BufferLineCyclePrev<cr>
 
 autocmd BufEnter * set formatoptions-=cro
 autocmd BufEnter * setlocal formatoptions-=cro
+
+highlight Pmenu ctermbg=gray guibg=gray
