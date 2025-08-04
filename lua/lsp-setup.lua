@@ -6,6 +6,7 @@ M.configname_to_lspname = {
     ["csharp"] = "omnisharp",
     ["cmp"] = "",
     ["rust"] = "rust_analyzer",
+    ["asm"] = "asm-lsp",
 }
 
 function M.setup()
@@ -21,15 +22,6 @@ function M.setup()
     local protocol = require('vim.lsp.protocol')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    config_def = {
-        pyright = true,
-        clangd = true,
-        csharp = true,
-        rust = true,
-        cmp = true,
-    }
-    for k,v in pairs(config) do config_def[k] = v end
-    config = config_def
     vim.lsp.config("pyright", {
         capabilities= capabilities
     })

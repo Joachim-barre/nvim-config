@@ -29,5 +29,12 @@
             "$dir/$fileNameWithoutExt"
         ],
         "rust" : "cargo test && cargo run $end"
+    },
+    "lspconfig" : {
+        "cmp": true,
+        "rust": true,
+        "pyright": true,
+        "clangd": true,
+        "csharp": true
     }
 }
