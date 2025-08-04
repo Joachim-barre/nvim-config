@@ -1,5 +1,13 @@
 local M = {}
 
+M.configname_to_lspname = {
+    ["pyright"] = "pyright",
+    ["clangd"] = "clangd",
+    ["csharp"] = "omnisharp",
+    ["cmp"] = "",
+    ["rust"] = "rust_analyzer",
+}
+
 function M.setup()
     local config_path = vim.fn.expand("./.nvim/lspconfig.json")
     local config = {}
@@ -56,8 +64,9 @@ function M.setup()
     end
 
     for k, v in pairs(config) do
-        if v then
-            vim.lsp.enable(k)
+        local name = M.configname_to_lspname[k]
+        if v and not (name == "") then
+            vim.lsp.enable(name)
         end
     end
 
