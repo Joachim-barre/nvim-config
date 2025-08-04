@@ -32,9 +32,27 @@
     },
     "lspconfig" : {
         "cmp": true,
-        "rust": true,
-        "pyright": true,
-        "clangd": true,
-        "csharp": true
+        "rust": {
+            "enabled": true,
+            "config": {}
+        },
+        "pyright": {
+            "enabled": true,
+            "config": {}
+        },
+        "clangd": {
+            "enabled": true,
+            "config": {}
+        },
+        "csharp": {
+            "enabled": true,
+            "config": {
+                "settings": {
+                    "enableImportCompletion" : true,
+                    "organizeImportsOnFormat" : true,
+                    "enableRoslynAnalyzers" : true
+                }
+            }
+        }
     }
 }

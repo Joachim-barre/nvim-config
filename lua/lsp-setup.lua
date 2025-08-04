@@ -31,13 +31,6 @@ function M.setup()
     vim.lsp.config("omnisharp", {
         capabilities = capabilities,
         cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
-        settings = {
-        omnisharp = {
-                enableImportCompletion = true,
-                organizeImportsOnFormat = true,
-                enableRoslynAnalyzers = true,
-            }
-        },
         root_dir = function ()
             return vim.loop.cwd() -- current working directory
         end,
@@ -53,7 +46,11 @@ function M.setup()
 
     for k, v in pairs(config) do
         local name = M.configname_to_lspname[k]
-        if v and not (name == "") then
+        if (not (name == "")) and v.enabled then
+            if not (v.config == nil) then
+                vim.lsp.config(name, v.config)
+            end
+
             vim.lsp.enable(name)
         end
     end
