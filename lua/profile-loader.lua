@@ -73,7 +73,7 @@ function M.load()
     if vim.fn.filereadable(vim.fn.stdpath("config") .. "/global-configs/profile.json") ~= 0 then
         local profile = require("code_runner.load_json")(vim.fn.stdpath("config") .. "/global-configs/profile.json") 
         if profile == nil then
-            vim.notify("failed to parse local profile")
+            vim.notify("failed to parse global profile")
             profile = {}  
         end
         vim.g.profile = vim.tbl_deep_extend("force", vim.g.profile, profile)
