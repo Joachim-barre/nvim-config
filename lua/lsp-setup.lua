@@ -9,11 +9,7 @@ M.configname_to_lspname = {
 }
 
 function M.setup()
-    local config_path = vim.fn.expand("./.nvim/lspconfig.json")
-    local config = {}
-    if vim.fn.filereadable(config_path) == 1 then
-        config = require("code_runner.load_json")(config_path)
-    end
+    local config = vim.g.profile["lspconfig"] or {}
     vim.cmd([[
     augroup _cpp_module
     autocmd!
