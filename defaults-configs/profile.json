@@ -52,6 +52,10 @@
                     "enableRoslynAnalyzers" : true
                 }
             }
+        },
+        "asm_lsp": {
+            "enabled": true,
+            "config": {}
         }
     }
 }
