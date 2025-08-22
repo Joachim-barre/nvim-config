@@ -15,6 +15,9 @@ function M.get_opts(module_name)
     local status_ok, module = pcall(require, "opts." .. module_name)
     if not status_ok then
         -- vim.notify("Coudn't find opts for '" .. module_name .. "'")
+        if not string.match(module, "module '.-' not found:.*") then
+            vim.notify("error loading opts for module \""..module_name.."\" : "..module)
+        end
         do return end
     end
     return module
