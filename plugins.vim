@@ -57,4 +57,5 @@ Plug 'https://github.com/onsails/lspkind.nvim'
 Plug 'NvChad/volt'
 Plug 'NvChad/minty'
 Plug 'NvChad/menu'
+Plug 'echasnovski/mini.files'
 call plug#end()

@@ -28,7 +28,8 @@ M.modules = {
     'gitsigns',
     'mini.git',
     'render-markdown',
-    'menu-setup'
+    'menu-setup',
+    'mini.files'
 }
 
 function build_modulelist()
