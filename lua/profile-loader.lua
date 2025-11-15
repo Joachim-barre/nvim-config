@@ -29,7 +29,8 @@ M.modules = {
     'mini.git',
     'render-markdown',
     'menu-setup',
-    'mini.files'
+    'mini.files',
+    'blink.indent'
 }
 
 function build_modulelist()

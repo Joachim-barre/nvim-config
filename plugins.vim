@@ -58,4 +58,5 @@ Plug 'NvChad/volt'
 Plug 'NvChad/minty'
 Plug 'NvChad/menu'
 Plug 'echasnovski/mini.files'
+Plug 'saghen/blink.indent'
 call plug#end()
