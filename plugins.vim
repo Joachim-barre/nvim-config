@@ -37,7 +37,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'Mythos-404/xmake.nvim', {'branch': 'v1'}
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'master'}
 Plug 'qwfy/doc-browser-nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'famiu/bufdelete.nvim'
 Plug 'theHamsta/nvim_rocks', {'do': 'pip3 install --user --break-system-packages hererocks && python3 -mhererocks . -j2.1.0-beta3 -r3.0.0 && cp nvim_rocks.lua lua'}
