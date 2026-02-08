@@ -29,6 +29,19 @@ return {
         close_command = function(bufnum)
             require('bufdelete').bufdelete(bufnum, true)
         end,
+        name_formatter = function(buf)
+            local parent = vim.fn.fnamemodify(buf.path, ":h:t")
+            local filename = vim.fn.fnamemodify(buf.path, ":t")
+
+            if parent == "" then
+                return filename
+            elseif vim.fn.fnamemodify(buf.path, ":.:h")=="." then
+                parent = "."
+            end
+
+            return parent .. "/" .. filename
+        end,
+        sort_by = "relative_directory",
         separator_style="slant"
     }
 }
