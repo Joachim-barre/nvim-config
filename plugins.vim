@@ -49,7 +49,7 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'echasnovski/mini.clue',
 Plug 'echasnovski/mini-git'
 Plug 'ellisonleao/glow.nvim'
-Plug 'linux-cultist/venv-selector.nvim', {'branch': 'regexp' }
+Plug 'linux-cultist/venv-selector.nvim'
 Plug 'MeanderingProgrammer/markdown.nvim'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'lewis6991/gitsigns.nvim'
