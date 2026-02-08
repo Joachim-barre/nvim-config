@@ -43,15 +43,8 @@
             "enabled": true,
             "config": {}
         },
-        "omnisharp": {
-            "enabled": true,
-            "config": {
-                "settings": {
-                    "enableImportCompletion" : true,
-                    "organizeImportsOnFormat" : true,
-                    "enableRoslynAnalyzers" : true
-                }
-            }
+        "csharp_ls": {
+            "enabled": true
         },
         "asm_lsp": {
             "enabled": true,
