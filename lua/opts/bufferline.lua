@@ -42,7 +42,8 @@ return {
             return parent .. "/" .. filename
         end,
         sort_by = "relative_directory",
-        separator_style="slant"
+        separator_style="slant",
+        show_duplicate_prefix = false
     }
 }
 
