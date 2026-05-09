@@ -59,4 +59,5 @@ Plug 'NvChad/minty'
 Plug 'NvChad/menu'
 Plug 'echasnovski/mini.files'
 Plug 'saghen/blink.indent'
+Plug 'smoka7/hop.nvim', { 'tag' : 'v2' }
 call plug#end()

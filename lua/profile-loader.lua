@@ -30,7 +30,8 @@ M.modules = {
     'render-markdown',
     'menu-setup',
     'mini.files',
-    'blink.indent'
+    'blink.indent',
+    'hop'
 }
 
 function build_modulelist()
